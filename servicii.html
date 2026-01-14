@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicii</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial, sans-serif;background:#000;color:#fff}
+
+/* NAVBAR */
+header{
+    max-width:1200px;
+    margin:20px auto;
+    padding:12px 25px;
+    border:2px solid white;
+    border-radius:40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:600;
+}
+nav a.active{color:#f28c28}
+
+/* PAGE */
+.page{
+    max-width:1200px;
+    margin:60px auto;
+    text-align:center;
+    position:relative;
+}
+
+.page h1{
+    font-size:64px;
+    margin-bottom:60px;
+}
+
+/* GRID */
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    padding:0 20px;
+}
+
+/* CARD FLIP */
+.card{
+    perspective:1000px;
+}
+
+.card-inner{
+    width:100%;
+    height:180px;
+    transition:transform .8s;
+    transform-style:preserve-3d;
+    position:relative;
+    cursor:pointer;
+}
+
+.card:hover .card-inner{
+    transform:rotateY(180deg);
+}
+
+.card.is-flipped .card-inner{
+    transform:rotateY(180deg);
+}
+
+.card-face{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    background:#e57b32;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    font-weight:bold;
+    text-align:center;
+    color:black;
+}
+
+.card-back{
+    transform:rotateY(180deg);
+    background:#ff9a55;
+    font-size:14px;
+    line-height:1.5;
+    font-weight:normal;
+}
+
+/* DECOR ORANGE SHAPES */
+.decor-left{
+    position:fixed;
+    left:-80px;
+    top:200px;
+    width:140px;
+    height:300px;
+    background:#f28c28;
+    border-radius:0 100px 100px 0;
+}
+.decor-right{
+    position:fixed;
+    right:-80px;
+    bottom:150px;
+    width:140px;
+    height:300px;
+    background:#f28c28;
+    border-radius:100px 0 0 100px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+    .services-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+    .services-grid{grid-template-columns:1fr}
+    .page h1{font-size:48px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div><strong>Daniel Rus - Cabinet de Psihologie</strong></div>
+    <nav>
+        <a href="index.html">ACASĂ</a>
+        <a href="servicii.html" class="active">SERVICII</a>
+        <a href="despre.html">DESPRE</a>
+        <a href="materiale.html">MATERIALE GRATUITE</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+</header>
+
+<div class="page">
+
+<h1>Servicii</h1>
+
+<div class="services-grid">
+
+<!-- CARD 1 -->
+<div class="card">
+    <div class="card-inner">
+        <div class="card-face card-front">
+            Consiliere și asistență psihopedagogică
+        </div>
+        <div class="card-face card-back">
+            Sprijin pentru adaptarea școlară, dezvoltarea abilităților de învățare și gestionarea provocărilor emoționale.
+        </div>
+    </div>
+</div>
+
+<!-- CARD 2 -->
+<div class="card">
+    <div class="card-inner">
+        <div class="card-face card-front">
+            Evaluare logopedică
+        </div>
+        <div class="card-face card-back">
+            Identificarea și analiza tulburărilor de limbaj și comunicare, cu stabilirea unui plan de terapie personalizat.
+        </div>
+    </div>
+</div>
+
+<!-- CARD 3 -->
+<div class="card">
+    <div class="card-inner">
+        <div class="card-face card-front">
+            Evaluarea nivelului de dezvoltare a copiilor
+        </div>
+        <div class="card-face card-back">
+            Monitorizarea progresului cognitiv, motric, socio-emoțional și lingvistic, pe baza instrumentelor standardizate.
+        </div>
+    </div>
+</div>
+
+<!-- CARD 4 -->
+<div class="card">
+    <div class="card-inner">
+        <div class="card-face card-front">
+            Terapia tulburărilor articulatorii și fonologice
+        </div>
+        <div class="card-face card-back">
+           Corectarea pronunției și îmbunătățirea clarității vorbirii.
+        </div>
+    </div>
+</div>
+
+<!-- CARD 5 -->
+<div class="card">
+    <div class="card-inner">
+        <div class="card-face card-front">
+            Intervenție timpurie în tulburările de limbaj și comunicare
+        </div>
+        <div class="card-face card-back">
+            Stimularea precoce a vocabularului, fluenței și înțelegerii mesajelor.
+        </div>
+    </div>
+</div>
+
+<!-- CARD 6 -->
+<div class="card">
+    <div class="card-inner">
+        <div class="card-face card-front">
+            Terapia dislexiei, disgrafiei și discalculiei
+        </div>
+        <div class="card-face card-back">
+            Corectarea dificultăților de citire, scriere și calcul prin metode adaptate.
+        </div>
+    </div>
+</div>
+
+<!-- CARD 7 -->
+<div class="card">
+    <div class="card-inner">
+        <div class="card-face card-front">
+           Reabilitare psihomotorie în terapia limbajului
+        </div>
+        <div class="card-face card-back">
+            Coordonare, atenție și integrare senzorială.
+        </div>
+    </div>
+</div>
+
+<!-- CARD 8 -->
+<div class="card">
+    <div class="card-inner">
+        <div class="card-face card-front">
+            Logopedie pentru adulți post-AVC
+        </div>
+        <div class="card-face card-back">
+            Evaluare și intervenție logopedică personalizată pentru adulți care se confruntă cu dificultăți de vorbire, comunicare sau înghițire în urma unui accident vascular cerebral.
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+<div class="decor-left"></div>
+<div class="decor-right"></div>
+
+<script>
+/* FLIP LA TAP PE MOBIL */
+document.querySelectorAll(".card").forEach(card=>{
+    card.addEventListener("click", ()=>{
+        card.classList.toggle("is-flipped");
+    });
+});
+</script>
+
+</body>
+</html>

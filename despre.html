@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Despre</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    font-family:Arial, sans-serif;
+    color:#000;
+    background:
+      linear-gradient(rgba(255,255,255,.85),rgba(255,255,255,.85)),
+      url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+    background-size:cover;
+    background-position:center;
+    min-height:100vh;
+}
+
+/* NAV */
+header{
+    max-width:1200px;
+    margin:20px auto;
+    padding:12px 25px;
+    border:2px solid #f28c28;
+    border-radius:40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+nav a{
+    color:#f28c28;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:600;
+}
+nav a.active{font-weight:800}
+
+/* LAYOUT */
+.page{
+    max-width:1200px;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:60px;
+    align-items:center;
+}
+
+/* IMAGE */
+.photo-wrap{
+    position:relative;
+    width:420px;
+    height:420px;
+}
+.photo-wrap::before{
+    content:"";
+    position:absolute;
+    inset:-30px;
+    background:white;
+    border-radius:50%;
+    z-index:0;
+}
+.photo{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+}
+.photo img{width:100%;height:100%;object-fit:cover}
+
+/* TEXT */
+.content h1{
+    font-size:64px;
+    margin-bottom:25px;
+}
+
+/* BIG BOX */
+.big-box{
+    background:#f28c28;
+    color:white;
+    padding:18px 22px;
+    border-radius:22px;
+    width:100%;
+    margin-bottom:20px;
+    font-size:15px;
+    line-height:1.6;
+}
+
+/* SMALL BOXES */
+.pills{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+}
+
+.pill{
+    background:#f28c28;
+    color:white;
+    padding:12px 20px;
+    border-radius:999px;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .page{grid-template-columns:1fr;text-align:center}
+    .photo-wrap{margin:0 auto}
+    .content h1{font-size:48px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div><strong>Daniel Rus - Cabinet de Psihologie</strong></div>
+    <nav>
+        <a href="index.html">ACASĂ</a>
+        <a href="servicii.html">SERVICII</a>
+        <a href="despre.html" class="active">DESPRE</a>
+        <a href="materiale.html">MATERIALE GRATUITE</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+</header>
+
+<section class="page">
+
+<!-- STÂNGA -->
+<div class="photo-wrap">
+    <div class="photo">
+        <img src="images/WhatsApp Image 2026-01-13 at 00.08.06.jpeg" alt="">
+    </div>
+</div>
+
+<!-- DREAPTA -->
+<div class="content">
+
+<h1>Despre Rus<br>Daniel</h1>
+
+<!-- CONTAINER MARE SUS -->
+<div class="big-box">
+    Sunt Daniel Rus, specialist în psihopedagogie specială, cu o experiență de peste 5 ani în consiliere psihopedagogică, evaluare și intervenție educațională. Activitatea mea se bazează pe respect, empatie și pe convingerea că fiecare persoană are nevoie de un cadru sigur și adaptat pentru a-și dezvolta potențialul.
+
+Pasiunea pentru psihopedagogia specială a apărut din dorința de a sprijini copiii, adolescenții și adulții care se confruntă cu dificultăți de dezvoltare, comunicare sau adaptare educațională. Consider că relația de sprijin autentic și colaborarea cu familia sunt esențiale în procesul de progres și echilibru.
+Parcursul meu academic și profesional reflectă interesul constant pentru perfecționare și pentru aplicarea celor mai potrivite metode de intervenție psihopedagogică:
+
+</div>
+
+<!-- 14 CONTAINERE MICI -->
+<div class="pills">
+    <div class="pill">2024 – Curs de specialitate în tulburările de pronunție</div>
+    <div class="pill">2024 – Program de dezvoltare profesională continuă „Bune practici în educația parentală”</div>
+    <div class="pill">2023 – Program de formare profesională continuă „Curs de logopedie – corectarea și dezvoltarea limbajului la copii”</div>
+    <div class="pill">2023 – Program de formare profesională continuă „Dezvoltarea abilităților de comunicare în tulburările din spectrul autist (TSA)”</div>
+    <div class="pill">2022 – Curs internațional, Danemarca – „Dezvoltarea și integrarea copiilor cu cerințe educaționale speciale (CES)”</div>
+    <div class="pill">2022 – Curs de formare profesională continuă „Metode și tehnici de evaluare și intervenție în tulburările de neurodezvoltare (TSA, TSI, ADHD, ADD) conform DSM V”
+</div>
+    <div class="pill">2021–2023 – Masterat în Tulburări ale limbajului și audiologie educațională, Facultatea de Psihologie și Științe ale Educației, UBB Cluj-Napoca
+</div>
+    <div class="pill">2021 – Program de formare continuă „Evaluarea complexă psihodiagnostică și psihopedagogică”</div>
+    <div class="pill">2021 – Curs de Consilier pentru Dezvoltare Personală</div>
+    <div class="pill">2020 – Curs de formare profesională continuă „Lucrul terapeutic cu muzica în recuperarea persoanelor cu dizabilități”</div>
+    <div class="pill">2019 – Curs de formare profesională continuă „Metode inovative de evaluare și dezvoltare a limbajului la copii (TSA) și adulți”</div>
+    <div class="pill">2019–2021 – Masterat în Asistență Socială și Economie Socială, UBB Cluj-Napoca
+</div>
+    <div class="pill">2017–2020 – Licență în Psihopedagogie Specială, Facultatea de Psihologie și Științe ale Educației, UBB Cluj-Napoca</div>
+    <div class="pill">2016–2019 – Licență în Asistență Socială, Facultatea de Sociologie și Asistență Socială, UBB Cluj-Napoca</div>
+</div>
+
+<!-- CONTAINER MARE JOS -->
+<div class="big-box" style="margin-top:20px;">
+    Despre activitatea mea profesională
+
+Activitatea mea se concentrează pe evaluare, consiliere și intervenție psihopedagogică, adaptate nevoilor individuale ale fiecărei persoane. Lucrez cu copii, adolescenți și adulți, în special cu persoane care prezintă tulburări de limbaj, tulburări din spectrul autist, dificultăți de comunicare, atenție sau alte provocări de neurodezvoltare.
+Pun accent pe o abordare educațională și funcțională, care urmărește dezvoltarea abilităților de comunicare, autonomie, adaptare și relaționare. Intervențiile mele sunt structurate, personalizate și realizate în colaborare cu familia, pentru a asigura continuitate și progres real.
+
+Participarea la cursuri naționale și internaționale mi-a consolidat o viziune holistică asupra dezvoltării, centrată pe nevoile reale ale persoanei și pe integrarea acesteia în mediul educațional și social.
+Cred că fiecare persoană are resurse valoroase care pot fi descoperite și dezvoltate. Rolul meu este de a oferi sprijin psihopedagogic profesionist, ghidare și structură, într-un mod empatic și adaptat fiecărei etape de dezvoltare.
+</div>
+
+</div>
+</section>
+
+</body>
+</html>

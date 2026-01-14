@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Daniel Rus - Cabinet de Psihologie</title>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background: #c85d1e; color: #fff; }
+
+        /* NAVBAR */
+        header {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a.active { color: black; }
+
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* CONTACT */
+        h1 { font-size: 64px; margin-bottom: 20px; }
+
+        ul { list-style: none; }
+        li { margin-bottom: 10px; font-size: 18px; }
+
+        /* REVIEW */
+        h2 { margin-top: 40px; font-size: 48px; }
+
+        .review-box {
+            background: #f2a46f;
+            color: black;
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+            min-height: 180px;
+            position: relative;
+        }
+
+        .review-text { font-size: 14px; line-height: 1.6; }
+        .review-author { margin-top: 15px; font-weight: bold; }
+
+        .slider-btns {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .slider-btns button {
+            background: white;
+            border: none;
+            padding: 6px 12px;
+            margin: 0 5px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        /* IMAGES */
+       .images {
+    position: relative;
+    height: 650px;   /* mai mult spațiu vertical */
+}
+
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+        }
+
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img1 {
+    width: 360px;
+    height: 360px;
+    top: -20px;
+    left: 40px;
+}
+
+.img2 {
+    width: 320px;
+    height: 320px;
+    top: 260px;
+    right: 10px;
+}
+
+
+        @media (max-width: 900px) {
+    .img1 {
+        width: 240px;
+        height: 240px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+    }
+
+    .img2 {
+        width: 220px;
+        height: 220px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 260px;
+        right: auto;
+    }
+
+    .images {
+        height: 520px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div><strong>Daniel Rus - Cabinet de Psihologie</strong></div>
+    <nav>
+        <a href="index.html">ACASĂ</a>
+        <a href="servicii.html">SERVICII</a>
+        <a href="despre.html">DESPRE</a>
+        <a href="materiale.html">MATERIALE GRATUITE</a>
+        <a href="contact.html" class="active">CONTACT</a>
+    </nav>
+</header>
+
+<section class="container">
+
+    <!-- LEFT -->
+    <div>
+        <h1>Contact</h1>
+        <ul>
+            <li>Adresă: str. Păcii, nr. 3, ap. 12, Zalău, Sălaj</li>
+            <li>Telefon: +40 741 144 218</li>
+            <li>Email: rusdaniel.cabinetdepsihologie@gmail.com</li>
+            <li>Program: Luni - Vineri, 16:00 - 20:00 | Sâmbătă, 09:00 - 14:00
+            </li>
+        </ul>
+
+        <h2>Recenzii</h2>
+
+        <div class="review-box">
+            <p id="reviewText" class="review-text"></p>
+            <p id="reviewAuthor" class="review-author"></p>
+
+            <div class="slider-btns">
+                <button onclick="prevReview()">‹</button>
+                <button onclick="nextReview()">›</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="images">
+        <div class="circle img1">
+            <img src="images/poza2.jpg" alt="">
+        </div>
+
+        <div class="circle img2">
+            <img src="images/WhatsApp Image 2026-01-13 at 00.19.42.jpeg" alt="">
+        </div>
+    </div>
+
+</section>
+
+<script>
+const reviews = [
+    {
+        text: "„Am apelat la domnul logoped Rus Daniel pentru dificultățile de vorbire ale fiului meu și am rămas plăcut surprinsă de profesionalismul și răbdarea de care a dat dovadă. După câteva luni de terapie, copilul pronunță mult mai clar și are mai multă încredere în el. În plus, sesiunile de consiliere pentru părinți ne-au ajutat să știm cum să îl sprijinim acasă. Recomand cu toată încrederea acest program terapeutic!”",
+        author: "— Andreea M."
+    },
+    {
+        text: "„Colaborez de câțiva ani cu domnul profesor și logoped Rus Daniel și pot spune că rezultatele obținute de elevii mei sunt vizibile și de durată. Nu doar că reușește să corecteze tulburările de limbaj, dar oferă și servicii de consiliere și asistență psihopedagogică, sprijinind integrarea copiilor în colectiv. Este un profesionist dedicat, care se implică cu seriozitate și empatie.”",
+        author: "— Mihaela T."
+    },
+    {
+        text: "Programul domnului Rus Daniel a fost o mare bucurie pentru familia noastră. Copilul nostru cu cerințe educaționale speciale a făcut progrese pe care nu le credeam posibile: comunică mai bine, se implică în activități și e mult mai deschis. Ne-au ajutat mult și întâlnirile de consiliere, care ne-au arătat cum să îl sprijinim și noi acasă. Îl recomand din suflet tuturor părinților care au nevoie de sprijin de calitate.”",
+        author: "— Ioana P."
+    },
+    {
+        text:"La început nu credeam că terapia logopedică mă va ajuta, dar domnul Rus Daniel m-a făcut să privesc lucrurile altfel. Ședințele sunt interactive și adaptate la nevoile mele. Am reușit să îmi corectez pronunția și să comunic mai liber. De asemenea, am primit consiliere psihopedagogică care m-a ajutat să îmi cresc stima de sine și să fiu mai încrezător la școală și în relațiile cu ceilalți.”",
+        author: "— Radu C."
+    }
+];
+
+let index = 0;
+
+function showReview() {
+    document.getElementById("reviewText").innerText = reviews[index].text;
+    document.getElementById("reviewAuthor").innerText = reviews[index].author;
+}
+
+function nextReview() {
+    index = (index + 1) % reviews.length;
+    showReview();
+}
+
+function prevReview() {
+    index = (index - 1 + reviews.length) % reviews.length;
+    showReview();
+}
+
+showReview();
+</script>
+
+</body>
+</html>

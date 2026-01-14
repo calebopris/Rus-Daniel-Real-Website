@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cabinet de Psihologie</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial, sans-serif;background:#000;color:#fff}
+
+/* NAVBAR */
+header{
+    max-width:1200px;
+    margin:20px auto;
+    padding:12px 25px;
+    border:2px solid white;
+    border-radius:40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:600;
+}
+nav a.active{color:#f28c28}
+
+/* HERO */
+.hero{
+    max-width:1200px;
+    margin:80px auto;
+    display:grid;
+    grid-template-columns: 500px 1fr; /* stânga poză | dreapta text */
+    align-items:center;
+    gap:80px;
+    position:relative;
+}
+
+
+.hero-text{
+    text-align:left;
+    justify-self:start;
+}
+
+
+
+/* IMAGE */
+.photo-wrap{
+    position:relative;
+    width:420px;
+    height:420px;
+    justify-self:start; /* forțează stânga */
+}
+
+.photo-wrap::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:white;
+    left:-30px;
+    top:30px;
+    z-index:0;
+}
+.photo{
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+}
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.orange-dot{
+    position:absolute;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:#f28c28;
+    right:-10px;
+    bottom:60px;
+    z-index:2;
+}
+
+/* TEXT */
+.hero h1{
+    font-size:64px;
+    line-height:1.1;
+}
+.hero h1 span{
+    color:#f28c28;
+}
+.hero p{
+    margin-top:20px;
+    max-width:520px;
+    line-height:1.6;
+    font-size:14px;
+    color:#ddd;
+}
+
+/* BUTTONS */
+.btns{
+    margin-top:25px;
+}
+.btn{
+    padding:12px 28px;
+    border-radius:30px;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+    margin-right:15px;
+    text-decoration:none;   /* important */
+    display:inline-block;   /* important */
+}
+
+.btn.orange{
+    background:#f28c28;
+    color:white;
+}
+.btn.white{
+    background:white;
+    color:black;
+}
+
+/* DECOR */
+.decorative-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.orange-shape-left {
+  position: absolute;
+  top: 20%;
+  left: -100px;
+  width: 200px;
+  height: 400px;
+  background: linear-gradient(135deg, #FF8C42, #FF6B1A);
+  border-radius: 0 100px 100px 0;
+  opacity: 0.8;
+}
+
+.orange-shape-right {
+  position: absolute;
+  bottom: 10%;
+  right: -100px;
+  width: 150px;
+  height: 300px;
+  background: linear-gradient(135deg, #FF8C42, #FF6B1A);
+  border-radius: 100px 0 0 100px;
+  opacity: 0.6;
+}
+
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+    .hero-text{
+        text-align:center;
+    }
+    .photo-wrap{
+        margin:0 auto;
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div><strong>Daniel Rus - Cabinet de Psihologie</strong></div>
+    <nav>
+        <a href="index.html" class="active">ACASĂ</a>
+        <a href="servicii.html">SERVICII</a>
+        <a href="despre.html">DESPRE</a>
+        <a href="materiale.html">MATERIALE GRATUITE</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+
+    <!-- IMAGE -->
+    <div class="photo-wrap">
+        <div class="photo">
+            <img src="images/poza1.jpg" alt="">
+        </div>
+        <div class="orange-dot"></div>
+    </div>
+
+    <!-- TEXT -->
+    <div class="hero-text">
+        <h1><span>Cabinet</span> de<br>Psihologie</h1>
+
+        <div class="btns">
+            <a class="btn orange" href="despre.html">PORTOFOLIU</a>
+            <a class="btn white" href="contact.html">CONTACT</a>
+        </div>
+
+        <p>
+                Cabinetul de Psihologie oferă servicii specializate de evaluare psihopedagogică și intervenții
+            personalizate, adresate copiilor, adolescenților și tinerilor care întâmpină dificultăți de
+            dezvoltare, învățare sau adaptare. Activitatea cabinetului este centrată pe sprijinirea potențialului individual și pe dezvoltarea armonioasă a fiecărei persoane, prin programe structurate, adaptate nevoilor specifice.
+        </p>
+    </div>
+
+
+</section>
+
+<div class="decorative-elements">
+      <div class="orange-shape-left"></div>
+      <div class="orange-shape-right"></div>
+    </div>
+</body>
+</html>
