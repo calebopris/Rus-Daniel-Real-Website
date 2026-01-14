@@ -114,27 +114,70 @@
 
 
         @media (max-width: 900px) {
-    .img1 {
+
+    header{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container{
+        grid-template-columns: 1fr;   /* o singură coloană */
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    /* TEXT + RECENZII PRIMELE */
+    .container > div:first-child{
+        order: 1;
+    }
+
+    /* POZELE DUPĂ */
+    .images{
+        order: 2;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        position: static;
+        margin-bottom: 40px;
+    }
+
+    .circle{
+        position: static;
+        transform: none !important;
+    }
+
+    .img1,
+    .img2{
         width: 240px;
         height: 240px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 0;
     }
 
-    .img2 {
-        width: 220px;
-        height: 220px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 260px;
-        right: auto;
+    h1{
+        font-size: 42px;
     }
 
-    .images {
-        height: 520px;
+    h2{
+        font-size: 32px;
+    }
+
+    li{
+        font-size: 16px;
+    }
+
+    .review-box{
+        margin-bottom: 20px;
     }
 }
+
 
     </style>
 </head>
@@ -233,3 +276,4 @@ showReview();
 
 </body>
 </html>
+
